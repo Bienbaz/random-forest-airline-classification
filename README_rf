@@ -1,0 +1,20 @@
+# Random Forest – Airline Customer Satisfaction Analysis
+
+## Dataset
+- File: `Invistico_Airline.csv` (uploaded in notebook)
+- Target: `satisfaction` (binary: satisfied vs neutral/dissatisfied)
+
+## Methodology
+- **Data Cleaning**: Median imputation for `Arrival Delay`, One-hot encoding.
+- **Split**: 60% Train / 20% Validation / 20% Test with `PredefinedSplit`.
+- **Tuning**: `GridSearchCV` on `n_estimators`, `max_depth`, `min_samples_leaf`, `max_features`.
+- **Evaluation**: Accuracy, Precision, Recall, **F1-score**.
+- **Comparison**: Random Forest vs Decision Tree.
+
+## Results
+(See notebook for exact metrics after running — typically RF F1 > 0.94)
+
+## Key Insights
+Top features: Inflight entertainment, Online boarding, Seat comfort.
+
+See full code and plots in `random_forest_airline_fixed.ipynb`.
