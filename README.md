@@ -1,59 +1,18 @@
-# Random Forest Classification – Airline Customer Satisfaction Prediction
+# Random Forest – Airline Customer Satisfaction Analysis
 
-## Project Overview
+## Dataset
+- File: `Invistico_Airline.csv`
+- Target: `satisfaction` (satisfied vs neutral/dissatisfied)
 
-This project applies **Machine Learning Classification techniques** to predict airline customer satisfaction using the **Random Forest Classifier**.
+## Methodology
+- Three-way split (60/20/20) to prevent data leakage
+- GridSearchCV + PredefinedSplit for hyperparameter tuning
+- Compared Random Forest vs Decision Tree
 
-The main objective is to build, optimize, and evaluate a classification model that can identify whether an airline customer is satisfied or dissatisfied based on customer service, flight experience, and demographic features.
+## Results
+Random Forest achieves higher accuracy, F1-score, and better generalization.
 
-The project demonstrates the complete machine learning workflow including:
+## Business Insight
+Improving Inflight entertainment, Online boarding, and Seat comfort will have the biggest impact on passenger satisfaction.
 
-- Data cleaning
-- Feature preprocessing
-- Three-way data splitting
-- Hyperparameter optimization using GridSearchCV
-- Model evaluation
-- Comparison with Decision Tree Classification
-
----
-
-# Project Objectives
-
-The objectives of this project are:
-
-- Load and explore the airline satisfaction dataset
-- Handle missing data
-- Encode categorical variables
-- Split data into training, validation, and testing datasets
-- Apply Random Forest Classification
-- Tune model parameters using GridSearchCV
-- Use PredefinedSplit for validation control
-- Evaluate model performance using:
-  - Accuracy
-  - Precision
-  - Recall
-  - F1-score
-- Compare Random Forest performance with Decision Tree
-- Interpret the results
-
----
-
-# Dataset Description
-
-The dataset contains airline customer information and feedback related to flight experiences.
-
-Example features include:
-
-| Feature | Description |
-|---|---|
-| Age | Customer age |
-| Gender | Customer gender |
-| Customer Type | Type of customer |
-| Flight Distance | Distance travelled |
-| Seat Comfort | Rating of seat comfort |
-| Food and Drink | Food service rating |
-| Inflight Service | Quality of inflight service |
-| Online Boarding | Online boarding experience |
-| Satisfaction | Target variable |
-
-The target variable is:
+See `random_forest_airline.ipynb` for full analysis.
